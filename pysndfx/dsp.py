@@ -329,6 +329,7 @@ class AudioEffectsChain:
 
     def vol(self, gain, type="amplitude", limiter_gain=None):
         self.command.append("vol")
+        self.command.append(gain)
         if type in ["amplitude", "power", "dB"]:
             self.command.append(type)
         else:
